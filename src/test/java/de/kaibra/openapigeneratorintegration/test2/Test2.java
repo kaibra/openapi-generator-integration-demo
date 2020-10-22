@@ -17,11 +17,11 @@ public class Test2 {
         // WHEN
         MyCodegenConfig custom = new MyCodegenConfig();
 
-        CodegenModel someModel = custom.fromModel("someModel", new Schema());
-
-//        Assert.assertNotNull(custom.getClassDescriptionHelper());
+        // Assert.assertNotNull(custom.getClassDescriptionHelper());
         ClassDescriptionHelper helperMock = mock(ClassDescriptionHelper.class);
-//        custom.setClassDescriptionHelper(helperMock);
+        // custom.setClassDescriptionHelper(helperMock);
+
+        CodegenModel someModel = custom.fromModel("someModel", new Schema());
 
         Assert.assertTrue(someModel.getVendorExtensions()
                 .containsKey("myCustomComment"));
