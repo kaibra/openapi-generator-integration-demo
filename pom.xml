@@ -54,11 +54,12 @@
             <groupId>org.openapitools</groupId>
             <artifactId>openapi-generator</artifactId>
             <version>${openapi-generator.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openapitools</groupId>
-            <artifactId>openapi-generator-cli</artifactId>
-            <version>${openapi-generator.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-simple</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
