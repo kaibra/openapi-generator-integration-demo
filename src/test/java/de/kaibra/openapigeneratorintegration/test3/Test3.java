@@ -9,22 +9,22 @@ import java.io.IOException;
 
 public class Test3 {
 
-    private ClassDescriptionHelper myHandlebarsFn;
+    private ClassDescriptionHelper descriptionHelper;
 
     @BeforeEach
     void setUp() {
-        myHandlebarsFn = new ClassDescriptionHelper();
+        descriptionHelper = new ClassDescriptionHelper();
     }
 
     @Test
     void shouldRenderAShortName() throws IOException {
-        String result = myHandlebarsFn.getCommentFor("Pet");
+        String result = descriptionHelper.getCommentFor("Pet");
         Assert.assertEquals(result, "\"Pet\" is a class with a short name");
     }
 
     @Test
     void shouldRenderALongName() throws IOException {
-        String result = myHandlebarsFn.getCommentFor("Order");
+        String result = descriptionHelper.getCommentFor("Order");
         Assert.assertEquals(result, "\"Order\" is a class with a long name");
     }
 
